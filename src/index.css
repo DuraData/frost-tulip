@@ -703,7 +703,16 @@ p {
   position: relative;
   padding-top: 150px;
   padding-bottom: clamp(56px, 7vw, 96px);
+  min-height: clamp(360px, 42vw, 520px);
+  display: flex;
+  align-items: flex-end;
   overflow: hidden;
+}
+
+.page-hero > .container {
+  position: relative;
+  z-index: 2;
+  width: 100%;
 }
 
 .page-hero h1 {
@@ -713,6 +722,92 @@ p {
 .page-hero .lead {
   max-width: 56ch;
   margin-top: 22px;
+}
+
+.page-hero-media {
+  position: absolute;
+  inset: 0;
+}
+
+.page-hero-slider,
+.page-hero-overlay,
+.page-hero-pattern {
+  position: absolute;
+  inset: 0;
+}
+
+.page-hero-slide {
+  position: absolute;
+  inset: 0;
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  opacity: 0;
+  transform: scale(1.03);
+  transition: opacity 0.9s var(--ease), transform 6s var(--ease);
+}
+
+.page-hero-slide.active {
+  opacity: 1;
+  transform: scale(1);
+}
+
+.page-hero-overlay {
+  background:
+    linear-gradient(180deg, rgba(7, 12, 19, 0.42) 0%, rgba(7, 12, 19, 0.72) 72%, rgba(7, 12, 19, 0.86) 100%),
+    linear-gradient(90deg, rgba(7, 12, 19, 0.66) 0%, rgba(7, 12, 19, 0.25) 48%, rgba(7, 12, 19, 0.5) 100%);
+  z-index: 1;
+}
+
+.page-hero-pattern {
+  background: repeating-linear-gradient(135deg, rgba(26, 48, 80, 0.64) 0 14px, rgba(11, 26, 47, 0.4) 14px 28px);
+  mix-blend-mode: overlay;
+  opacity: 0.62;
+  z-index: 1;
+}
+
+.page-hero-label,
+.page-hero-dots {
+  position: absolute;
+  left: 50%;
+  z-index: 2;
+  transform: translateX(-50%);
+}
+
+.page-hero-label {
+  top: 46%;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-width: min(280px, calc(100% - 40px));
+  padding: 9px 14px;
+  font-family: var(--font-mono);
+  font-size: 0.68rem;
+  letter-spacing: 0.22em;
+  text-transform: uppercase;
+  color: #d8e6f4;
+  background: rgba(9, 18, 31, 0.82);
+  border: 1px solid rgba(216, 230, 244, 0.12);
+  box-shadow: var(--shadow);
+}
+
+.page-hero-dots {
+  bottom: 26px;
+  display: inline-flex;
+  gap: 10px;
+}
+
+.page-hero-dot {
+  width: 38px;
+  height: 3px;
+  border-radius: 999px;
+  background: rgba(255, 255, 255, 0.26);
+  transition: background 0.3s var(--ease), transform 0.3s var(--ease);
+}
+
+.page-hero-dot.active {
+  background: var(--accent);
+  transform: scaleX(1.08);
 }
 
 .crumbs {
@@ -1777,5 +1872,25 @@ p {
 
   .steps-nav {
     flex-direction: column;
+  }
+
+  .page-hero {
+    min-height: 320px;
+    padding-top: 128px;
+  }
+
+  .page-hero-label {
+    top: 42%;
+    min-width: calc(100% - 32px);
+    font-size: 0.62rem;
+    letter-spacing: 0.16em;
+  }
+
+  .page-hero-dots {
+    bottom: 18px;
+  }
+
+  .page-hero-dot {
+    width: 26px;
   }
 }

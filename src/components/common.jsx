@@ -1,5 +1,6 @@
 import { useEffect, useRef, useState } from "react";
 import { Link } from "react-router-dom";
+import { pageHeroSlides } from "../data/siteData";
 import { ArrowIcon, CheckIcon } from "./icons";
 
 export function SectionHead({ kicker, title, lead, center = false }) {
@@ -16,12 +17,49 @@ export function Placeholder({ label, className = "" }) {
   return <div className={`ph ${className}`.trim()} data-label={label} />;
 }
 
+export function HeroSliderBackground({ label, slides = pageHeroSlides }) {
+  const [activeIndex, setActiveIndex] = useState(0);
+
+  useEffect(() => {
+    if (slides.length <= 1) return undefined;
+
+    const timerId = window.setInterval(() => {
+      setActiveIndex((current) => (current + 1) % slides.length);
+    }, 4500);
+
+    return () => window.clearInterval(timerId);
+  }, [slides]);
+
+  return (
+    <div className="page-hero-media" aria-hidden="true">
+      <div className="page-hero-slider">
+        {slides.map((slide, index) => (
+          <div
+            key={slide.src}
+            className={`page-hero-slide${index === activeIndex ? " active" : ""}`}
+            style={{ backgroundImage: `url("${slide.src}")` }}
+          />
+        ))}
+      </div>
+      <div className="page-hero-overlay" />
+      <div className="page-hero-pattern" />
+      {label ? <div className="page-hero-label">{label}</div> : null}
+      <div className="page-hero-dots">
+        {slides.map((slide, index) => (
+          <span
+            key={slide.src}
+            className={`page-hero-dot${index === activeIndex ? " active" : ""}`}
+          />
+        ))}
+      </div>
+    </div>
+  );
+}
+
 export function PageHero({ title, kicker, lead, label, crumbs }) {
   return (
     <section className="page-hero">
-      <div className="ph-bg">
-        <Placeholder label={label} />
-      </div>
+      <HeroSliderBackground label={label} />
       <div className="container">
         <div className="crumbs">
           <Link to="/">Home</Link>

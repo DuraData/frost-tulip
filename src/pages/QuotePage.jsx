@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 import { company, services } from "../data/siteData";
 import { useDocumentTitle } from "../hooks/useDocumentTitle";
 import { ArrowIcon, CheckIcon, SendIcon } from "../components/icons";
-import { Placeholder } from "../components/common";
+import { HeroSliderBackground } from "../components/common";
 
 export function QuotePage() {
   useDocumentTitle(`Get a Quote - ${company.name}`);
@@ -60,9 +60,7 @@ export function QuotePage() {
   return (
     <>
       <section className="page-hero" style={{ paddingBottom: 0 }}>
-        <div className="ph-bg">
-          <Placeholder label="Blueprints and project planning" />
-        </div>
+        <HeroSliderBackground label="Blueprints and project planning" />
         <div className="container">
           <div className="crumbs">
             <Link to="/">Home</Link>
