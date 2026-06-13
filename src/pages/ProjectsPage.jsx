@@ -28,7 +28,6 @@ export function ProjectsPage() {
         title="Proof, poured in concrete."
         kicker="Our Portfolio"
         lead="A selection of homes, commercial buildings, roads and industrial works delivered by our teams across Zimbabwe."
-        label="Portfolio of completed buildings"
         crumbs="Projects"
       />
 

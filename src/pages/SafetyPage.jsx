@@ -13,7 +13,6 @@ export function SafetyPage() {
         title="Everyone goes home safe."
         kicker="Health, Safety and Environment"
         lead="Safety is not a department at Frost Tulip. It is how every site runs."
-        label="Site crew in full PPE"
         crumbs="Health and Safety"
       />
 

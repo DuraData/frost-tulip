@@ -32,7 +32,6 @@ export function ContactPage() {
         title="Let's talk about your project."
         kicker="Get In Touch"
         lead="Reach out by form, phone or WhatsApp. Our team typically responds within one business day."
-        label="Frost Tulip head office Harare"
         crumbs="Contact"
       />
 

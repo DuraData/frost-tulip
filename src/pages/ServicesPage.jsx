@@ -23,7 +23,6 @@ export function ServicesPage() {
         title="Five disciplines. One accountable team."
         kicker="What We Do"
         lead="Whatever the scope, we bring the same engineering rigour, transparent management and quality finish to every project."
-        label="Construction services montage"
         crumbs="Services"
       />
 

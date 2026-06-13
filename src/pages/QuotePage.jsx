@@ -60,7 +60,7 @@ export function QuotePage() {
   return (
     <>
       <section className="page-hero" style={{ paddingBottom: 0 }}>
-        <HeroSliderBackground label="Blueprints and project planning" />
+        <HeroSliderBackground />
         <div className="container">
           <div className="crumbs">
             <Link to="/">Home</Link>

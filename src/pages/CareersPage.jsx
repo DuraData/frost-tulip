@@ -33,7 +33,6 @@ export function CareersPage() {
         title="Build your career with us."
         kicker="Join Our Team"
         lead="We're always looking for skilled, safety-minded people who take pride in their work."
-        label="Diverse construction team at work"
         crumbs="Careers"
       />
 

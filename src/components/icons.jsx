@@ -144,6 +144,31 @@ export function ShieldIcon() {
   );
 }
 
+export function ScaleIcon() {
+  return (
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round">
+      <path d="M12 3v18M6 7h12M4 7l-2 4a3 3 0 0 0 6 0L6 7ZM18 7l-2 4a3 3 0 0 0 6 0l-2-4" />
+    </svg>
+  );
+}
+
+export function HelmetIcon() {
+  return (
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round">
+      <path d="M4 14a8 8 0 0 1 16 0v2H4v-2Z" />
+      <path d="M12 6v4M4 16v2a2 2 0 0 0 2 2h2M20 16v2a2 2 0 0 1-2 2h-2" />
+    </svg>
+  );
+}
+
+export function BulbIcon() {
+  return (
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round">
+      <path d="M9 18h6M10 22h4M8.8 14.8A6 6 0 1 1 15.2 14.8C14.4 15.6 14 16.2 14 17h-4c0-.8-.4-1.4-1.2-2.2Z" />
+    </svg>
+  );
+}
+
 export function StarIcon() {
   return (
     <svg viewBox="0 0 24 24" fill="currentColor">

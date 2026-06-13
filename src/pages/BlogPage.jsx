@@ -18,7 +18,6 @@ export function BlogPage() {
         title="News from the site and beyond."
         kicker="Insights"
         lead="Industry news, practical construction tips, project updates and safety insights from our team."
-        label="Editorial construction imagery"
         crumbs="Blog and News"
       />
 

@@ -339,7 +339,7 @@ export const blogPosts = [
     title: "Zimbabwe's infrastructure pipeline: what builders should expect in 2026",
     date: "May 28, 2026",
     read: "6 min",
-    img: "Infrastructure skyline editorial",
+    img: "Infrastructure skyline overview",
     excerpt: "From road rehabilitation to industrial SEZs, the public works pipeline is shifting. Here's how contractors can position for it.",
   },
   {

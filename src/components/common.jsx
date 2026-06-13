@@ -165,7 +165,7 @@ export function Placeholder({ label, className = "" }) {
   );
 }
 
-export function HeroSliderBackground({ label, slides = pageHeroSlides }) {
+export function HeroSliderBackground({ slides = pageHeroSlides }) {
   const [activeIndex, setActiveIndex] = useState(0);
 
   useEffect(() => {
@@ -191,7 +191,6 @@ export function HeroSliderBackground({ label, slides = pageHeroSlides }) {
       </div>
       <div className="page-hero-overlay" />
       <div className="page-hero-pattern" />
-      {label ? <div className="page-hero-label">{label}</div> : null}
       <div className="page-hero-dots">
         {slides.map((slide, index) => (
           <span
@@ -204,10 +203,10 @@ export function HeroSliderBackground({ label, slides = pageHeroSlides }) {
   );
 }
 
-export function PageHero({ title, kicker, lead, label, crumbs }) {
+export function PageHero({ title, kicker, lead, crumbs }) {
   return (
     <section className="page-hero">
-      <HeroSliderBackground label={label} />
+      <HeroSliderBackground />
       <div className="container">
         <div className="crumbs">
           <Link to="/">Home</Link>

@@ -13,7 +13,6 @@ export function IndustriesPage() {
         title="Built for every sector."
         kicker="Industries We Serve"
         lead="From single family homes to government infrastructure, we tailor our delivery to the standards and priorities of each sector."
-        label="Diverse building types collage"
         crumbs="Industries"
       />
 
