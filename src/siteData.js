@@ -205,6 +205,7 @@ export const projects = [
     img: "Steel-frame warehouse completed",
     year: "2023",
     value: "$1.9M",
+    area: "4,200m2",
     client: "Logistics Co.",
     scope: "4,200m2 warehouse plus offices",
     desc: "A 4,200m2 distribution facility with structural steel frame, dock levellers and integrated office block built to international logistics standards.",

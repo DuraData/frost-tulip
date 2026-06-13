@@ -1,8 +1,7 @@
 import { useMemo, useState } from "react";
 import { company, projects } from "../data/siteData";
 import { useDocumentTitle } from "../hooks/useDocumentTitle";
-import { MapPinIcon } from "../components/icons";
-import { BeforeAfter, PageHero, Placeholder, SectionHead } from "../components/common";
+import { BeforeAfter, PageHero, Placeholder, ProjectMeta, SectionHead } from "../components/common";
 import { ProjectModal } from "../components/ProjectModal";
 
 export function ProjectsPage() {
@@ -71,10 +70,7 @@ export function ProjectsPage() {
                 <div className="proj-body">
                   <div className="cat">{project.cat}</div>
                   <h3>{project.title}</h3>
-                  <div className="loc">
-                    <MapPinIcon />
-                    {`${project.location} · ${project.year}`}
-                  </div>
+                  <ProjectMeta project={project} />
                 </div>
               </button>
             ))}

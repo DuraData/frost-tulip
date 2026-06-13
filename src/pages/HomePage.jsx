@@ -1,8 +1,8 @@
 import { Link } from "react-router-dom";
 import { company, industries, projects, services, testimonials } from "../data/siteData";
 import { useDocumentTitle } from "../hooks/useDocumentTitle";
-import { ArrowIcon, MapPinIcon, ServiceIcon, StarIcon } from "../components/icons";
-import { CTA, BeforeAfter, CheckList, Placeholder, SectionHead, StatsGrid } from "../components/common";
+import { ArrowIcon, ServiceIcon, StarIcon } from "../components/icons";
+import { CTA, BeforeAfter, CheckList, Placeholder, ProjectMeta, SectionHead, StatsGrid } from "../components/common";
 
 export function HomePage() {
   useDocumentTitle(`${company.name} - ${company.tagline}`);
@@ -147,10 +147,7 @@ export function HomePage() {
                 <div className="proj-body">
                   <div className="cat">{project.cat}</div>
                   <h3>{project.title}</h3>
-                  <div className="loc">
-                    <MapPinIcon />
-                    {project.location}
-                  </div>
+                  <ProjectMeta project={project} />
                 </div>
               </Link>
             ))}
